@@ -1,0 +1,11 @@
+appdaemon:
+  thread: 10
+  plugins: 
+   HASS:
+     type: hass
+     ha_url: 192.168.1.24:8123
+     ha_key: 12345
+
+hadashboard:
+  dash_url: http://0.0.0.0:5050
+  dash_password: aaaa
