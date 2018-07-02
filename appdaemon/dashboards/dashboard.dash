@@ -1,7 +1,7 @@
 #
 #
 #
-title: hello
+title: 我的家
 widget_dimensions: [120, 120]
 widget_size: [1, 1]
 widget_margins: [5, 5]
@@ -12,5 +12,6 @@ global_parameters:
   use_hass_icon: 1
 
 layout:
-  - light.hall
-  - media_player(2X1), sensor.temperature
+  - light.gateway_light_7c49eb1cf7d1
+  - sun.sun
+ 

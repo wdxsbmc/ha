@@ -1,0 +1,36 @@
+2018-07-02 23:29:50 ERROR (MainThread) [homeassistant.components.sensor] Error while setting up platform yr
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/homeassistant/helpers/entity_platform.py", line 129, in _async_setup_platform
+    SLOW_SETUP_MAX_WAIT, loop=hass.loop)
+  File "/usr/lib/python3.5/asyncio/tasks.py", line 400, in wait_for
+    return fut.result()
+  File "/usr/lib/python3.5/asyncio/futures.py", line 293, in result
+    raise self._exception
+  File "/usr/lib/python3.5/asyncio/tasks.py", line 239, in _step
+    result = coro.send(None)
+  File "/usr/local/lib/python3.5/dist-packages/homeassistant/components/sensor/yr.py", line 95, in async_setup_platform
+    yield from weather.fetching_data()
+  File "/usr/local/lib/python3.5/dist-packages/homeassistant/components/sensor/yr.py", line 169, in fetching_data
+    websession = async_get_clientsession(self.hass)
+  File "/usr/local/lib/python3.5/dist-packages/homeassistant/helpers/aiohttp_client.py", line 38, in async_get_clientsession
+    hass.data[key] = async_create_clientsession(hass, verify_ssl)
+  File "/usr/local/lib/python3.5/dist-packages/homeassistant/helpers/aiohttp_client.py", line 55, in async_create_clientsession
+    connector = _async_get_connector(hass, verify_ssl)
+  File "/usr/local/lib/python3.5/dist-packages/homeassistant/helpers/aiohttp_client.py", line 164, in _async_get_connector
+    connector = aiohttp.TCPConnector(loop=hass.loop, ssl=ssl_context)
+TypeError: __init__() got an unexpected keyword argument 'ssl'
+2018-07-02 23:29:56 ERROR (MainThread) [homeassistant.core] Error doing job: Task exception was never retrieved
+Traceback (most recent call last):
+  File "/usr/lib/python3.5/asyncio/tasks.py", line 239, in _step
+    result = coro.send(None)
+  File "/usr/local/lib/python3.5/dist-packages/homeassistant/components/cloud/__init__.py", line 223, in async_start
+    success = yield from self._fetch_jwt_keyset()
+  File "/usr/local/lib/python3.5/dist-packages/homeassistant/components/cloud/__init__.py", line 266, in _fetch_jwt_keyset
+    session = async_get_clientsession(self.hass)
+  File "/usr/local/lib/python3.5/dist-packages/homeassistant/helpers/aiohttp_client.py", line 38, in async_get_clientsession
+    hass.data[key] = async_create_clientsession(hass, verify_ssl)
+  File "/usr/local/lib/python3.5/dist-packages/homeassistant/helpers/aiohttp_client.py", line 55, in async_create_clientsession
+    connector = _async_get_connector(hass, verify_ssl)
+  File "/usr/local/lib/python3.5/dist-packages/homeassistant/helpers/aiohttp_client.py", line 164, in _async_get_connector
+    connector = aiohttp.TCPConnector(loop=hass.loop, ssl=ssl_context)
+TypeError: __init__() got an unexpected keyword argument 'ssl'

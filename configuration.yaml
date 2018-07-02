@@ -14,7 +14,7 @@ homeassistant:
   customize: !include customize.yaml
 
 # Show links to resources in log and frontend
-introduction:
+#introduction:
 
 # Enables the frontend
 frontend:
@@ -38,7 +38,7 @@ updater:
   # include_used_components: true
 
 # Discover some devices automatically
-discovery:
+#discovery:
 
 # Allows you to issue voice commands from the frontend in enabled browsers
 conversation:
@@ -66,6 +66,19 @@ tts:
 # Cloud
 cloud:
 
+
+# xiaomi
+xiaomi_aqara:
+  discovery_retry: 5
+  gateways:
+   - key: pqkqbbchoua3hmc5 
+
+#light:
+#platform: xiaomi_aqara
+# name: night light
+# alias: xxxlight
+# entities: light.gateway_light_7c49eb1cf7d1
+        
 group: !include groups.yaml
 automation: !include automations.yaml
 script: !include scripts.yaml
