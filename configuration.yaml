@@ -56,12 +56,14 @@ map:
 sun:
 
 # Weather prediction
-sensor:
-  - platform: yr
+#sensor:
+#  - platform: test_sensor
+    #scan_interval，对于会拉取状态的设备，都会存在这个配置项，缺省值为30（秒）
+    #scan_interval: 3
 
 # Text to speech
-tts:
-  - platform: google
+#tts:
+#  - platform: google
 
 # Cloud
 cloud:
@@ -69,7 +71,7 @@ cloud:
 
 # xiaomi
 xiaomi_aqara:
-  discovery_retry: 5
+  discovery_retry: 1
   gateways:
    - key: pqkqbbchoua3hmc5 
 
@@ -78,7 +80,15 @@ xiaomi_aqara:
 # name: night light
 # alias: xxxlight
 # entities: light.gateway_light_7c49eb1cf7d1
-        
+
+#test component service
+hello_world:
+  name_tobe_displayed: "testtest"
+  step: 5
+
 group: !include groups.yaml
 automation: !include automations.yaml
 script: !include scripts.yaml
+sensor: !include_dir_merge_list sensor 
+
+
