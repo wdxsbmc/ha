@@ -1,0 +1,42 @@
+load_main_panel:
+    widget_type: navigate
+    title: 总控开关
+    icon_inactive: fa-home
+    dashboard: MainPanel
+
+load_living_room_panel:
+    widget_type: navigate
+    title: 播放控制
+    icon_inactive: fa-play
+    dashboard: LivingRoomPanel
+
+load_dinner_panel:
+    widget_type: navigate
+    title: 投影机
+    icon_inactive: mdi-projector
+    dashboard: Dinner
+
+load_bathroom_panel:
+    widget_type: navigate
+    title: 电脑
+    icon_inactive: fa-laptop
+    dashboard: Bathroom 
+    
+load_bedroom2_panel:
+    widget_type: navigate
+    title: 灯光
+    icon_inactive: mdi-lightbulb-outline
+    dashboard: Bedroom2
+
+load_controls:
+    widget_type: navigate
+    title: 主题设置
+    icon_inactive: fa-dashboard
+    dashboard: Controls
+    
+reload:
+    widget_type: reload
+    title: 重新加载
+    
+layout: 
+    - load_main_panel, load_living_room_panel, load_dinner_panel, load_bathroom_panel, load_bedroom2_panel, load_controls, reload

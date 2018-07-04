@@ -1,0 +1,19 @@
+secrets: ../secrets.yaml
+#log:
+ #logfile: STDOUT
+ #errorfile: STDERR
+appdaemon:
+  disable_apps: 1
+  threads: 10
+  # app_dir: /config/appdaemon/apps
+  plugins:
+    HASS:
+      type: hass
+      ha_url: http://192.168.1.24:8123
+      ha_key: "12345"
+hadashboard:
+  dash_url: http://0.0.0.0:5050
+  #dash_dir: ./dashboards
+  dash_compile_on_start: 1  ##强制 dashborad 加载所有面板的最新配置，请使用：
+  #dash_password: !secret http_password
+  dash_force_compile: 1  ##这将让 dashboard 每次加载时强制响应修改。

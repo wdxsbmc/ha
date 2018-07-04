@@ -1,0 +1,49 @@
+default:
+  title: 样式
+  title2: Default
+  widget_type: navigate
+  dashboard: Controls
+  skin: default
+
+
+blue:
+  title: 样式
+  title2: blue
+  widget_type: navigate
+  dashboard: Controls
+  skin: blue
+
+house:
+  title: 样式
+  title2: house
+  widget_type: navigate
+  dashboard: Controls
+  skin: house
+
+snow:
+  title: 样式
+  title2: snow
+  widget_type: navigate
+  dashboard: Controls
+  skin: snow
+
+forest:
+  title: 样式
+  title2: forest
+  widget_type: navigate
+  dashboard: Controls
+  skin: forest
+
+
+metro:
+  title: 样式
+  title2: Metro
+  widget_type: navigate
+  dashboard: Controls
+  skin: metro
+
+
+
+layout:
+  -
+  - default, blue, house, snow, forest, metro

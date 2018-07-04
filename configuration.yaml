@@ -71,7 +71,7 @@ cloud:
 
 # xiaomi
 xiaomi_aqara:
-  discovery_retry: 1
+  discovery_retry: 5
   gateways:
    - key: pqkqbbchoua3hmc5 
 
@@ -86,9 +86,9 @@ hello_world:
   name_tobe_displayed: "testtest"
   step: 5
 
-group: !include groups.yaml
+#group: !include groups.yaml
 automation: !include automations.yaml
 script: !include scripts.yaml
-sensor: !include_dir_merge_list sensor 
+#sensor: !include_dir_merge_list sensor 
 
 

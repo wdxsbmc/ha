@@ -1,0 +1,21 @@
+
+light_wgd:
+    widget_type: light
+    title: 网关灯
+    entity: light.gateway_light_7811dcb063a5
+    icon_on: mdi-white-balance-incandescent
+    icon_off: mdi-white-balance-incandescent
+
+light_bgs:
+    widget_type: switch
+    title: 办公室灯
+    entity: switch.wall_switch_158d00016d99cc
+    icon_on: mdi-white-balance-incandescent
+    icon_off: mdi-white-balance-incandescent
+
+
+
+
+layout:
+    - light_wgd, light_bgs
+    - 
