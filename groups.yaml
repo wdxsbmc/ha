@@ -1,5 +1,13 @@
-Help Weather:
+#Help Weather:
+default_view:
+  view: yes      
   name: 帮天气
+  entities:
+    - group.sensor_now
+    - group.sensor_future
+    - group.sensor_sug
+sensor_now:
+  name: 当前天气
   entities:
     - sensor.helpweather_now_aqi
     - sensor.helpweather_now_humidity
@@ -29,6 +37,9 @@ Help Weather:
     - sensor.helpweather_aqi_pm25
     - sensor.helpweather_aqi_so2
     - sensor.helpweather_aqi_update
+sensor_future:
+  name: 天气预报
+  entities:
     - sensor.helpweather_1hour_temp
     - sensor.helpweather_1hour_time
     - sensor.helpweather_1hour_weather
@@ -80,6 +91,9 @@ Help Weather:
     - sensor.helpweather_oftertomorrowday_weather
     - sensor.helpweather_oftertomorrowday_wind
     - sensor.helpweather_oftertomorrowday_windforce
+sensor_sug:
+  name: 健康指数
+  entities:
     - sensor.helpweather_zs_cl_suggestion_info
     - sensor.helpweather_zs_cl_suggestion_level
     - sensor.helpweather_zs_cl_suggestion_name
