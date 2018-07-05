@@ -13,9 +13,12 @@ light_bgs:
     icon_on: mdi-white-balance-incandescent
     icon_off: mdi-white-balance-incandescent
 
+label_test:
+    widget_type: label
+    text: hello test
 
 
 
 layout:
     - light_wgd, light_bgs
-    - 
+    - label_test(2x2)
