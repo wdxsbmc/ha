@@ -344,6 +344,43 @@ h3 {
 	height: 100%;
 }
 
+.widget-basedisplay-default-label-test .unit {
+	font-size: 225%;
+	font-weight: 400;
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 5px;
+	margin-top: 5px;
+}
+
+.widget-basedisplay-default-label-test .value {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.widget-basedisplay-default-label-test .valueunit {
+	width: 100%;
+	vertical-align: middle;
+}
+
+.widget-basedisplay-default-label-test .title {
+	position: absolute;
+	top: 5px;
+	width: 100%;
+}
+
+.widget-basedisplay-default-label-test .title2 {
+	position: absolute;
+	top: 23px;
+	width: 100%;
+}
+
+.widget-basedisplay-default-label-test .state_text {
+	position: absolute;
+	bottom: -3px;
+	width: 100%;
+}
+
 .widget-basejavascript-default-load-main-panel .icon {
 	position: absolute;
 	top: 43px;

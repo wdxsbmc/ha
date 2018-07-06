@@ -2,7 +2,7 @@
 light_wgd:
     widget_type: light
     title: 网关灯
-    entity: light.gateway_light_7811dcb063a5
+    entity: light.gateway_light_7c49eb1cf7d1
     icon_on: mdi-white-balance-incandescent
     icon_off: mdi-white-balance-incandescent
 

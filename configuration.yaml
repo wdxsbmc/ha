@@ -12,6 +12,7 @@ homeassistant:
   time_zone: Asia/Shanghai
   # Customization file
   customize: !include customize.yaml
+  
 
 # Show links to resources in log and frontend
 #introduction:
@@ -25,6 +26,7 @@ config:
 http:
   # Secrets are defined in the file secrets.yaml
   api_password: !secret http_password
+  #api_password: http_password
   # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
   # base_url: example.duckdns.org:8123
 
@@ -71,7 +73,7 @@ cloud:
 
 # xiaomi
 xiaomi_aqara:
-  discovery_retry: 5
+  discovery_retry: 1
   gateways:
    - key: pqkqbbchoua3hmc5 
 
@@ -90,5 +92,4 @@ hello_world:
 automation: !include automations.yaml
 script: !include scripts.yaml
 #sensor: !include_dir_merge_list sensor 
-
-
+secret: !include secrets.yaml

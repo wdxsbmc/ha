@@ -1,4 +1,4 @@
-secrets: ../../secrets.yaml
+#secret: secrets.yaml
 #log:
  #logfile: STDOUT
  #errorfile: STDERR
@@ -15,5 +15,5 @@ hadashboard:
   dash_url: http://0.0.0.0:5050
   #dash_dir: ./dashboards
   dash_compile_on_start: 1  ##强制 dashborad 加载所有面板的最新配置，请使用：
-  #dash_password: !secret http_password
+  dash_password: "pwd12345"
   dash_force_compile: 1  ##这将让 dashboard 每次加载时强制响应修改。
