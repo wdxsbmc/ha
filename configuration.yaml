@@ -40,7 +40,7 @@ updater:
   # include_used_components: true
 
 # Discover some devices automatically
-discovery:
+#discovery:
 
 # Allows you to issue voice commands from the frontend in enabled browsers
 conversation:
@@ -72,10 +72,10 @@ cloud:
 
 
 # xiaomi
-xiaomi_aqara:
-  discovery_retry: 1
-  gateways:
-   - key: pqkqbbchoua3hmc5 
+#xiaomi_aqara:
+#  discovery_retry: 1
+#  gateways:
+#   - key: pqkqbbchoua3hmc5 
 
 #light:
 #platform: xiaomi_aqara
@@ -84,12 +84,34 @@ xiaomi_aqara:
 # entities: light.gateway_light_7c49eb1cf7d1
 
 #test component service
-hello_world:
-  name_tobe_displayed: "testtest"
-  step: 5
+#hello_world:
+#  name_tobe_displayed: "testtest"
+#  step: 5
+
+#modbus climate wifi config
+modbus:
+  type: rtuovertcp
+  host: 192.168.1.10
+  port: 8899
+
+   
+#broadlink get yoogee pwm code by rmpro
+switch:
+  - platform: broadlink
+    host: 192.168.1.14
+    mac: '78:0F:77:00:83:A4'
+    switches:
+      reciever:
+        command_off: 'sgpEAAoAAUUKHwofCh8KHx8KCh8KHx8KCh8KHwofCh8KHwofCh8fCh8KCh8fCgofCh8fCgofCh8KHwofCh8fCgofCh8fCh8K'
+        command_on: 'sgpEAAoAAUUKHwofCh8KHx8KCh8KHwofCh8KHwofCh8KHwofCh8fCh8KCh8fCgofCh8fCgofCh8KHwofCh8fCgofCh8fCh8K'
+
+       
 
 #group: !include groups.yaml
 automation: !include automations.yaml
 script: !include scripts.yaml
-#sensor: !include_dir_merge_list sensor 
+#sensor: !include_dir_merge_list sensor
 secret: !include secrets.yaml
+#climate
+climate: !include climate.yaml
+ 

@@ -1,0 +1,31 @@
+- platform: gree_other
+  name: gree
+  host: 192.168.1.1
+  mac: '78:0F:77:00:83:A4'
+  target_sensor: sensor.broadlink_sensor_temperature
+  target_temp: 27
+
+- platform: modbus
+  name: haixin
+  temperature: {register: 3, register_type: input, scale: 0.1}
+  target_temperature: {register: 4}
+  operation: {register: 5}
+  fan: {register: 6}
+  is_on: {register: 1, register_type: coil}
+
+#full config 
+#- platform: modbus
+#  name: Daikin
+#  temperature: {registers: [3,7,11], register_type: input, scale: 0.1}
+#  target_temperature: {registers:[4,8,12]}
+#  operation: {registers: [5,9,13]}
+#  fan: {registers: [6,10,14]}
+#  is_on: {registers[: [1,2,3], register_type: coil}
+#  humidity: {registers: [30,31,32], register_type: input, scale: 0.1}
+#  target_humidity: {registers:[40,41,42]}
+#  swing: {registers:[50,51,52]}
+#  hold: {registers:[60,61,62]}
+#  away: {registers:[70,71,72]}
+#  aux: {registers:[80,81,82]}
+#  operation_list: [无效, 制冷, 制热, 除湿, 送风]
+#  fan_list: [自动, 一级, 二级, 三级, 四级, 五级]
